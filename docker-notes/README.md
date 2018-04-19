@@ -6,6 +6,7 @@
 
   * [Overview](#overview)
   * [Docker terminology](#docker-terminology)
+  * [Docker Commands](#docker-commands)
   * [Resources](#resources)
   * [Links](#links)
   
@@ -32,6 +33,27 @@ software on the same infrastructure. [[1]](https://www.docker.com/what-container
 **Docker Engine** - The code which manages Docker stuff. Creates and runs Docker
 Containers.
 
+## Docker Commands
+
+### ```docker run```[[2]](https://docs.docker.com/engine/reference/commandline/run/)
+
+```
+docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+```
+
+This command is used to run an arbitrary command in a new container.
+A container has to either exist on [Docker Hub](https://hub.docker.com)
+or on the local machine. For example, to start latest Ubuntu container and 
+print "Hello World" message execute:
+
+```
+docker run ubuntu echo "Hello World"
+```
+
+This command will automatically pull latest ubuntu image from Docker Hub,
+create new container instance and execute ```echo "Hello World"``` command
+inside the container.
+
 ## Resources
 
 [Docker Documentation](https://docs.docker.com)
@@ -40,3 +62,4 @@ Containers.
 
 ## Links
 1. [What is a Container](https://www.docker.com/what-container)
+
